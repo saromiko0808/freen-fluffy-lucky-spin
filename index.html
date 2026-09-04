@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta name="theme-color" content="#401538">
+  <title>Freen & Fluffy Lucky Spin</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="app">
+    <section id="home" class="screen home active">
+      <div class="brand">FREEN ✦ FLUFFY</div>
+      <h1>Lucky Spin</h1>
+      <p class="subtitle">轉出 Freen 的多重宇宙，和 Fluffy 一起收集幸運！</p>
+      <div class="cover-wrap"><div class="cover-glow"></div><img src="cover-fluffy.png" alt="Freen 與 Fluffy"></div>
+      <button id="startBtn" class="primary">開始挑戰</button>
+      <button id="continueBtn" class="secondary hidden">繼續第 <span id="continueLevel">1</span> 關</button>
+      <p class="note">純粉絲小遊戲，不含金錢、下注或購買功能</p>
+    </section>
+
+    <section id="levels" class="screen">
+      <header><button class="icon-btn" data-home aria-label="首頁">⌂</button><div><b>12 關幸運旅程</b><small><span id="totalStars">0</span> / 36 顆星</small></div><button class="icon-btn sound-btn" aria-label="聲音">♪</button></header>
+      <div id="levelGrid" class="level-grid"></div>
+      <button id="collectionBtn" class="collection-entry">💚 翡翠收藏室 <span id="fragmentCount">0</span>/6</button>
+    </section>
+
+    <section id="game" class="screen">
+      <header><button class="icon-btn" id="backLevels" aria-label="選關">‹</button><div><b id="levelTitle">第 1 關</b><small id="levelRule">幸運初轉</small></div><button class="icon-btn sound-btn" aria-label="聲音">♪</button></header>
+      <div class="hud">
+        <div><small>分數 SCORE</small><strong id="score">0</strong></div>
+        <div><small>目標 GOAL</small><strong id="goal">200</strong></div>
+        <div><small>剩餘 SPINS</small><strong id="spins">10</strong></div>
+      </div>
+      <div class="progress"><i id="progressBar"></i></div>
+      <div class="machine" id="machine">
+        <div id="lines" class="lines"></div>
+        <div class="reels" id="reels" aria-label="拉霸結果"></div>
+        <div id="message" class="message">按下 SPIN，開始收集幸運！</div>
+      </div>
+      <div id="freenTime" class="freen-time hidden">FREEN TIME ×2</div>
+      <button id="spinBtn" class="spin">SPIN <span>幸運轉一下</span></button>
+      <div class="legend"><span>三個相同＝高分</span><span>🐶 Fluffy＝百搭</span><span>💚 隱藏碎片</span></div>
+    </section>
+
+    <section id="result" class="screen result">
+      <div id="resultBurst" class="result-burst"></div>
+      <div class="result-card">
+        <div id="resultEmoji" class="result-emoji">✨</div>
+        <h2 id="resultTitle">過關！</h2>
+        <p id="resultText"></p>
+        <div id="resultStars" class="big-stars">☆☆☆</div>
+        <div class="result-score">本關分數 <b id="finalScore">0</b></div>
+        <button id="nextBtn" class="primary">下一關</button>
+        <button id="retryBtn" class="secondary">再玩一次</button>
+        <button id="chooseBtn" class="text-btn">返回選關</button>
+      </div>
+    </section>
+
+    <section id="collection" class="screen collection">
+      <header><button class="icon-btn" id="collectionBack">‹</button><div><b>翡翠收藏室</b><small>Emerald Collection</small></div><button class="icon-btn sound-btn">♪</button></header>
+      <div class="gem">💚</div>
+      <h2>隱藏版碎片</h2>
+      <div id="gemSlots" class="gem-slots"></div>
+      <p id="collectionHint">在第 7 關之後，有機會遇見翡翠訊號。</p>
+      <div id="secretCard" class="secret-card locked"><img src="secret.png" alt="翡翠隱藏版"><div class="lock">🔒<br>集滿 6 枚碎片解鎖</div></div>
+      <div id="secretBadge" class="secret-badge hidden">🏆 SECRET JACKPOT 已收藏</div>
+    </section>
+  </main>
+  <div id="toast" class="toast"></div>
+  <script src="game.js"></script>
+</body>
+</html>
