@@ -33,13 +33,18 @@
         <div><small>剩餘 SPINS</small><strong id="spins">10</strong></div>
       </div>
       <div class="progress"><i id="progressBar"></i></div>
+      <div class="luck-panel" id="luckPanel">
+        <span>LOVE &amp; LUCK</span>
+        <b id="luckHearts">♡ ♡ ♡ ♡</b>
+        <small id="luckHint">沒連線也會累積幸運</small>
+      </div>
       <div class="machine" id="machine">
         <div id="lines" class="lines"></div>
         <div class="reels" id="reels" aria-label="拉霸結果"></div>
         <div id="message" class="message">按下 SPIN，開始收集幸運！</div>
       </div>
       <div id="freenTime" class="freen-time hidden">FREEN TIME ×2</div>
-      <button id="spinBtn" class="spin">SPIN <span>幸運轉一下</span></button>
+      <button id="spinBtn" class="spin">SPIN <span id="spinHelp">按住蓄力・放開轉動</span></button>
       <div class="legend"><span>兩個相同＝得分</span><span>三個相同＝高分</span><span>🐶 Fluffy＝百搭</span></div>
     </section>
 
